@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_pos_config_form" model="ir.ui.view">
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <!-- <field name="arch" type="xml"><field name="iface_invoicing" position="before"><field name="pos_order_timeout"/></field></field> -->
+        <field name="arch" type="xml">
+            <div id="category_reference" position="before">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="pos_order_timeout">
+                    <div class="o_setting_right_pane">
+                        <label string="Order Timeout"/>
+                        <div class="text-muted">Send order timeout (s), default 7.5s if empty</div>
+                        <div class="content-group mt16">
+                            <field name="pos_order_timeout" colspan="4" nolabel="1"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
