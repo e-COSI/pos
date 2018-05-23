@@ -119,7 +119,7 @@ class TeliumPaymentTerminalDriver(Thread):
             return False
 
     def prepare_data_to_send(self, payment_info_dict):
-        amount = payment_info_dict['amount']
+        amount = float(payment_info_dict['amount'])
         if payment_info_dict['payment_mode'] == 'check':
             payment_mode = 'C'
         elif payment_info_dict['payment_mode'] == 'card':
