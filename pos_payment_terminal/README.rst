@@ -29,8 +29,10 @@ Configuration
 =============
 
 This module support two payment modes : *card* and *check*. The payment
-mode should be configured on the main Odoo server, in the menu *Point
-of Sale > Configuration > Payment Methods*, under the *Point of Sale* tab.
+mode should be configured on the main Odoo server, in the menu *Invoicing > Configuration > Journals*,
+select a journal used in the point of sale and select the type under the *Point of Sale* tab.
+
+In the settings of each point of sale unit that uses a payment terminal, check *Payment Terminal* under *PosBox*.
 
 Usage
 =====
