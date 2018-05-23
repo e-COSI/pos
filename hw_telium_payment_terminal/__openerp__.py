@@ -66,10 +66,21 @@ This module has been successfully tested with:
 * Ingenico iCT250
 * Ingenico i2200 cheque reader and writer
 
-This module requires the Python library *pycountry* version >= 16.11.08.
-To install it, run:
+This module requires the Python libraries *pycountry* version >= 16.11.08
+and *pyserial* version >= 3.4
+
+To install them, run:
 
 sudo pip install pycountry
+sudo pip install pyserial
+
+If *pyserial* is already installed, upgrade it:
+
+sudo pip install pyserial --upgrade
+
+To avoid any conflict, make sure the *serial* module is not installed :
+
+sudo pip uninstall serial
 
 This module has been developped during a POS code sprint at Akretion
 France from July 7th to July 10th 2014. This module is part of the POS
@@ -84,7 +95,7 @@ This module has been written by Alexis de Lattre
     'website': 'http://www.akretion.com',
     'depends': ['hw_proxy'],
     'external_dependencies': {
-        'python': ['serial', 'pycountry'],
+        'python': ['pyserial', 'pycountry'],
     },
     'data': [],
 }
