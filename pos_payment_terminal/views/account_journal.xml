@@ -6,9 +6,11 @@
         <field name="model">account.journal</field>
         <field name="inherit_id" ref="point_of_sale.view_account_journal_pos_user_form"/>
         <field name="arch" type="xml">
-            <field name="amount_authorized_diff" position="after">
-                <field name="payment_mode"/>
-            </field>
+            <xpath expr="//group[field/@name='amount_authorized_diff']" position="after">
+                <group>
+                    <field name="payment_mode"/>
+                </group>
+            </xpath>
         </field>
     </record>
 
